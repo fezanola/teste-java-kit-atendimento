@@ -19,19 +19,18 @@ public class DispensadorDeSenhas {
 import java.util.Scanner;
 
 public class DispensadorDeSenhas {
-    static int qntSenhasBobina = 100;
-    static int senhaBobina = 1;
+    static int qntSenhasBobina = 100, senhaBobina = 1;
 
-    public static void main(String[] args) {
+    public void retiraSenha() {
         Scanner retirarSenha = new Scanner (System.in);
         System.out.println("Retirar senha? y/n: ");
         String retirada = retirarSenha.nextLine();
 
         if (retirada.equals("y")) {
             if (qntSenhasBobina > 0) {
-                qntSenhasBobina--;
+                DispensadorDeSenhas.qntSenhasBobina--;
                 System.out.println("Sua senha é: "+ senhaBobina);
-                senhaBobina++;
+                DispensadorDeSenhas.senhaBobina++;
             } else {
                 System.out.println("As senhas acabaram");
             }
