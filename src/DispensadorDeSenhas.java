@@ -21,10 +21,9 @@ import java.util.Scanner;
 public class DispensadorDeSenhas {
     static int qntSenhasBobina = 100, senhaBobina = 1;
 
-    public void retiraSenha() {
-        Scanner retirarSenha = new Scanner (System.in);
+    public void retiraSenha(Scanner scanner) {
         System.out.println("Retirar senha? y/n: ");
-        String retirada = retirarSenha.nextLine();
+        String retirada = scanner.nextLine();
 
         if (retirada.equals("y")) {
             if (qntSenhasBobina > 0) {
@@ -37,6 +36,5 @@ public class DispensadorDeSenhas {
         } else {
             System.out.println("Operação cancelada.");
         }
-        retirarSenha.close();
     }
 }
